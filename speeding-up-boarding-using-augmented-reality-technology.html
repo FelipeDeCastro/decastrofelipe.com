@@ -67,7 +67,7 @@
     </div>
     <div id="password-overlay" class="password-overlay">
       <div class="prompt w-form">
-        <form id="wf-form-signal" name="wf-form-signal" data-name="signal" method="post">
+        <form id="wf-form-signal" name="wf-form-signal" data-name="signal" method="get">
           <label for="signal" class="password-overlay-label">Confidential work</label>
           <div class="mb-small">Connect with me on <a href="https://www.linkedin.com/in/felipepvc/" target="_blank">LinkedIn</a> for access if you don&#x27;t have the password yet.</div>
           <input class="w-input" autofocus="true" maxlength="256" name="signal" data-name="Signal" placeholder="Password" type="text" id="signal" required=""/>
@@ -295,7 +295,7 @@
 <script src="assets/js/webflow.schunk.b4435221be879eb3.js" type="text/javascript"></script>
 <script src="assets/js/webflow.0329e51c.7f13c06c91a96975.js" type="text/javascript"></script>
 <script>
-    function checkPassword() {
+    function checkPassword(event) {
       event.preventDefault();
       var enteredPassword = document.getElementById("signal").value;
       var correctPassword = "abracadabra";
