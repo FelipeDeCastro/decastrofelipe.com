@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-wf-page="6315e2233c5896474192778a" data-wf-site="6303bbde7e8891552c333a00">
   <head>
     <meta charset="utf-8"/>
     <title>Manual Desk App - Allowing border forces to comply with the EU new biometric regulations</title>
@@ -473,6 +473,43 @@
                                 <script src="assets/js/webflow.schunk.d9bc5928bec29435.js" type="text/javascript"></script>
                                 <script src="assets/js/webflow.schunk.b4435221be879eb3.js" type="text/javascript"></script>
                                 <script src="assets/js/webflow.614ae880.6ff0d02ba338d90c.js" type="text/javascript"></script>
-                                <script>    function checkPassword() {        	// Prevent the default form submission or link behavior    	event.preventDefault();            var enteredPassword = document.getElementById("signal").value;      // Replace 'your_password_here' with your desired password      var correctPassword = "abracadabra";      if (enteredPassword === correctPassword) {        document.getElementById("password-overlay").classList.add("hidden");        document.getElementById("protected-content").classList.remove("hidden");;      } else {     	 alert("Incorrect password. Access denied.");      }    }        // Function to add event listener to the button    function addEventListenerToButton() {      var button = document.getElementById("password-submit-button");      if (button) {        button.addEventListener("click", checkPassword);      }    }    // Function to add event listener to the form    function addEventListenerToForm() {      var form = document.getElementById("wf-form-signal");      if (form) {        form.addEventListener("submit", checkPassword);      }    }        function passRestrictContent() {    	document.getElementById("password-overlay").classList.remove("hidden");      document.getElementById("protected-content").classList.add("hidden");    }         // Call the function to add event listener when the page is fully loaded    window.onload = function () {    	passRestrictContent()      addEventListenerToButton();      addEventListenerToForm();    }; </script>
+                                <script>
+    function checkPassword() {
+      event.preventDefault();
+      var enteredPassword = document.getElementById("signal").value;
+      var correctPassword = "abracadabra";
+      if (enteredPassword === correctPassword) {
+        document.getElementById("password-overlay").classList.add("hidden");
+        document.getElementById("protected-content").classList.remove("hidden");
+      } else {
+        alert("Incorrect password. Access denied.");
+      }
+    }
+
+    function addEventListenerToButton() {
+      var button = document.getElementById("password-submit-button");
+      if (button) {
+        button.addEventListener("click", checkPassword);
+      }
+    }
+
+    function addEventListenerToForm() {
+      var form = document.getElementById("wf-form-signal");
+      if (form) {
+        form.addEventListener("submit", checkPassword);
+      }
+    }
+
+    function passRestrictContent() {
+      document.getElementById("password-overlay").classList.remove("hidden");
+      document.getElementById("protected-content").classList.add("hidden");
+    }
+
+    window.onload = function () {
+      passRestrictContent();
+      addEventListenerToButton();
+      addEventListenerToForm();
+    };
+</script>
                               </body>
                             </html>
